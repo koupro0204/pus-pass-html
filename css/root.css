@@ -1,0 +1,25 @@
+:root {
+    /* colors */
+    --background: #F0F8FF;
+    --dark-blue: #003366;
+    --dark-gray: #333333;
+    --gray-dark: #343A40;
+    --gray: #808080;
+
+    --department-color1: #FFA07A;
+    --department-color2: #BA55D3;
+    --department-color3: #6CC24A;
+    --department-color4: #FF69B4;
+    --department-color5: #00BFFF;
+
+    --medium-blue: #5A9BD5;
+    --off-white: #F5F5F5;
+    --primary: #F5F5F5;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* font size */
+    --header-text: 20px;
+
+
+}

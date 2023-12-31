@@ -1,0 +1,375 @@
+@charset "UTF-8";
+:root {
+    /* colors */
+    --background: #F0F8FF;
+    --dark-blue: #003366;
+    --dark-gray: #333333;
+    --gray-dark: #343A40;
+    --gray: #808080;
+
+    --department-color1: #FFA07A;
+    --department-color2: #BA55D3;
+    --department-color3: #6CC24A;
+    --department-color4: #FF69B4;
+    --department-color5: #00BFFF;
+
+    --medium-blue: #5A9BD5;
+    --off-white: #F5F5F5;
+    --primary: #F5F5F5;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* font */
+    --header-text: 20px;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --sp-small-font-size: 12px;
+    --small-font-size: 14px;
+    --base-font-size: 16px;
+    --header-font-size: 16px;
+    --large-font-size: 24px;
+    --h2-font-size: 32px;
+    --title-font-size: 48px;
+
+
+}
+/* すべての要素に適用 */
+* {
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* ボディの設定 */
+body {
+    position: relative;
+    margin: 0;
+    background: var(--background);
+}
+
+/* ヘッダーの設定 */
+header {
+    position: relative;
+    background-color: var(--white);
+    padding: 5px 0;
+    display: flex;
+}
+header .logo-wrapper {
+    margin-left: 40px;
+    margin-right: auto;
+}
+header .logo-wrapper img {
+    width: 150px;
+    height: 50px;
+}
+
+/* ナビゲーションの設定 */
+header nav {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+}
+header nav ul {
+    display: flex;
+    /* 右寄せ */
+    justify-content: flex-end;
+}
+header nav ul li {
+    /* list-style: none; */
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    color: var(--gray);
+    font-size: var(--header-font-size);
+    font-weight: var(--font-weight-normal);
+}
+nav ul li:hover {
+    transition: all 1s;   
+}
+#nav-drawer {
+    display: none;
+}
+.top-image {
+    width: 100%;
+    height: 330px;
+    background-image: url(../images/puspass-bgimage.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.top-image h1 {
+    position: absolute;
+    top: 10%;    
+    color: var(--black);
+    font-size: var(--title-font-size);
+    font-weight: var(--font-weight-bold);
+    text-align: right;
+    line-height: 1.4;
+    padding: 50px 0 20px 60px;
+}
+
+footer {
+    background-color: var(--dark-blue);
+    padding: 48px 40px 20px;
+}
+footer > p {
+    color: var(--white);
+    font-size: var(--base-font-size);
+    font-weight: var(--font-weight-normal);
+    margin: 20px 0;
+    text-align: center;
+}
+.footer-logo {
+    color: var(--white);
+    width: 100%;
+    text-align: center;
+}
+
+.footer-logo h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-normal);
+    margin-bottom: 10px;
+}
+.footer-logo p {
+    font-size: var(--base-font-size);
+    font-weight: var(--font-weight-normal);
+    margin-bottom: 20px;
+}
+.footer-nav {
+    margin: 0 auto;
+    max-width: 960px;
+}
+.footer-nav > ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-nav > ul > li > p {
+    color: var(--white);
+    font-size: var(--base-font-size);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 10px;
+}
+.footer-nav > ul > li > ul > li{
+    list-style: none;
+    cursor: pointer;
+    padding: 5px 0;
+    color: var(--white);
+    font-size: var(--small-font-size);
+
+}
+
+.news-wrapper {
+    margin: 20px auto;
+    max-width: 720px;
+    padding: 15px 0;
+    background-color: var(--white);
+    border-radius: 15px;
+}
+.news-wrapper h2 {
+    color: var(--medium-blue);
+    font-size: var(--h2-font-size);
+    padding: 5px;
+}
+.news-wrapper hr {
+    border: 1px solid var(--medium-blue);
+}
+.news-content {
+    padding: 20px;
+    width: 100%;
+    font-size: var(--base-font-size);
+    line-height: 1.5;
+}
+.news-content .news-item {
+    display: flex;
+    font-size: var(--base-font-size);
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px dotted var(--medium-blue);
+    margin: 10px 0;
+}
+.news-item-content {
+    font-size: var(--base-font-size);
+}
+.news-item-date {
+    font-size: var(--small-font-size);
+    margin-right: 10px;
+}
+
+/* メディアクエリ */
+@media (max-width:1001px) {
+    .header-nav {
+        position: fixed;
+        display: none;
+    }
+    header .logo-wrapper {
+        margin-left: 20px;
+    }
+    header .logo-wrapper img {
+        width: 120px;
+        height: 40px;
+    }
+    #nav-drawer {
+        position: relative;
+        display: block;
+        padding: 10px
+    }
+
+    #nav-drawer .nav-unshown {
+        display: none
+    }
+
+    #nav-drawer #nav-open {
+        display: inline-block;
+        width: 30px;
+        height: 22px
+    }
+
+    #nav-drawer #nav-open span,#nav-drawer #nav-open span:before,#nav-drawer #nav-open span:after {
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #404e5c;
+        display: block;
+        content: "";
+        cursor: pointer
+    }
+
+    #nav-drawer #nav-open span:before {
+        bottom: -8px
+    }
+
+    #nav-drawer #nav-open span:after {
+        bottom: -16px
+    }
+
+    #nav-drawer #nav-close {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0;
+        transition: 0.3s ease-in-out
+    }
+
+    #nav-drawer #nav-content {
+        background-color: black;
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 90%;
+        max-width: 270px;
+        height: 100%;
+        background: white;
+        transition: 0.3s ease-in-out;
+        -webkit-transform: translateX(-105%);
+        transform: translateX(-105%)
+    }
+
+    #nav-drawer #nav-content .title {
+        background-color: #f1f5f9
+    }
+
+    #nav-drawer #nav-content .title h2 {
+        padding: 40px 20px 20px;
+        font-size: 16px
+    }
+
+    #nav-drawer #nav-content ul {
+        border-bottom: solid 1px #f1f5f9
+    }
+
+    #nav-drawer #nav-content ul a {
+        display: block;
+        color: #404e5c
+    }
+
+    #nav-drawer #nav-content ul li {
+        border-bottom: solid 1px #f1f5f9;
+        padding: 10px 20px;
+        font-size: 16px
+    }
+
+    #nav-drawer #nav-content ul li i {
+        padding-right: 10px
+    }
+
+    #nav-drawer #nav-content ul li:hover {
+        background-color: #e6e6e6
+    }
+
+    #nav-drawer #nav-input:checked~#nav-close {
+        display: block;
+        opacity: 0.5
+    }
+
+    #nav-drawer #nav-input:checked~#nav-content {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        box-shadow: 6px 0 25px rgba(0,0,0,0.15)
+    }
+    .top-image h1 {
+        font-size: 18px;
+        padding: 50px 0 20px 20px;
+    }
+    .top-image {
+        width: 100%;
+        height: 200px;
+    }
+    .footer-nav {
+        margin-top: 30px;
+        width: 80%;
+    }
+    footer > p, .footer-logo p {
+        font-size: var(--small-font-size);
+    } 
+    footer .footer-logo h2 {
+        font-size: var(--large-font-size);
+    }
+    .footer-nav>ul>li {
+        width: 100%;
+        border-bottom: white solid thin;
+        padding: 24px 0;
+    }
+    .news-wrapper {
+        margin: 20px auto;
+        width: 80%;
+        padding: 15px 0;
+        background-color: var(--white);
+        border-radius: 15px;
+    }
+    .news-wrapper h2 {
+        color: var(--medium-blue);
+        font-size: var(--base-font-size);
+        padding: 5px;
+    }
+    .news-wrapper hr {
+        border: none;
+        height: 0.5px;
+        background-color: var(--medium-blue);
+    }
+    .news-content {
+        padding: 10px;
+    }
+    .news-item-content {
+        font-size: var(--small-font-size);
+    }
+    .news-item-date {
+        font-size: var(--sp-small-font-size);
+    }
+}
