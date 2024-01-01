@@ -10,12 +10,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 <title>キャンパスコンパス</title>
 </head>
 <body>
     <header>
         <div class="logo-wrapper">
-            <img src="images/puspass-logo.png" alt="puspassロゴ">
+            <img src="images/puspass-logo.svg" alt="puspassロゴ">
         </div>
         <nav class="header-nav">
             <ul>
@@ -92,7 +94,7 @@
     </div>
     <!-- main -->
     <main>
-        <div class="news-wrapper">
+        <section class="news-wrapper">
             <h2>News</h2>
             <hr>
             <div class="news-content">
@@ -116,10 +118,103 @@
                         </div>
                     </div>
                 </a>
+                <a href="#">
+                    <div class="news-item">
+                        <div class="news-item-content">
+                            <p>サイトをリニューアルしました。</p>
+                        </div>
+                        <div class="news-item-date">
+                            <p>2021/09/01</p>
+                        </div>
+                    </div>
+                </a>
             </div>
             <hr>
-        </div>
-
+        </section>
+        <section class="top-recommendation">
+            <div class="container">
+                <div class="link-title">
+                    <h2>
+                        <i class="fas fa-search"></i>
+                        さあ、探しに行こう
+                    </h2>
+                </div>
+            </div>
+            <div class="cards-wrapper">
+                <div class="cards-container">
+                    <a href="#">
+                        <div class="card card-hover">
+                            <div class="card_image">
+                                <img src="/images/class.svg">
+                            </div>
+                            <div class="content non_label">
+                                <h4>授業評価・時間割</h4>
+                                <p>授業情報・時間割の検索及び閲覧可能。授業に関連のある評価を投稿・閲覧可能。</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card card-hover">
+                            <div class="card_image">
+                                <img src="/images/research.svg">
+                            </div>
+                            <div class="content non_label">
+                                <h4>研究室情報</h4>
+                                <p>学生に実際の研究室の情報をまとめて掲載中。どれくらいの頻度なのか休みをとれるかなど。</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card card-hover">
+                            <div class="card_image">
+                                <img src="/images/circle.svg">
+                            </div>
+                            <div class="content non_label">
+                                <h4>サークル・団体情報</h4>
+                                <p>学内サークルや団体を掲載中。学内公式サークルだけでなくしっかり活動している団体などを掲載。</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card card-hover">
+                            <div class="card_image">
+                                <img src="/images/event.svg">
+                            </div>
+                            <div class="content non_label">
+                                <h4>イベント情報</h4>
+                                <p>サークルでのイベントや外部での技科大生向けのイベントなどを掲載。</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="top-recommendation-item">
+            <div class="container">
+                <div class="link-title">
+                    <h2>
+                        <!-- iconを変える -->
+                        <i class="fa-solid fa-comments"></i>
+                        授業評価を登録
+                    </h2>
+                </div>
+            </div>
+            <div class="cards-wrapper">
+                <div class="cards-container">
+                    <a href="#">
+                        <div class="card card-hover">
+                            <div class="card_image">
+                                <img src="/images/register.svg">
+                            </div>
+                            <div class="content non_label">
+                                <h4>現在の評価数：400件</h4>
+                                <p>学生の方の投稿で成り立っています。良ければ授業評価の登録をお願いします。</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- <aside></aside> -->
     <footer>

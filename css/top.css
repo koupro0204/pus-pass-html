@@ -30,7 +30,7 @@
     --base-font-size: 16px;
     --header-font-size: 16px;
     --large-font-size: 24px;
-    --h2-font-size: 32px;
+    --h2-font-size: 28px;
     --title-font-size: 48px;
 
 
@@ -53,7 +53,13 @@ body {
     margin: 0;
     background: var(--background);
 }
-
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+h2 {
+    letter-spacing: 3.2px;
+}
 /* ヘッダーの設定 */
 header {
     position: relative;
@@ -203,9 +209,125 @@ footer > p {
     font-size: var(--small-font-size);
     margin-right: 10px;
 }
+.top-recommendation {
+    padding: 40px 0 20px;
+}
+.top-recommendation .link-title h2,  .top-recommendation-item .link-title h2{
+    color: var(--black);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-medium); 
+}
 
+/* cards section */
+.top-recommendation .cards-wrapper {
+    display: flex;
+    max-width: 100%;
+}
+.top-recommendation a:hover, .top-recommendation-item a:hover {
+    text-decoration: none;
+}
+
+.cards-wrapper {
+    padding: 10px 0;
+}
+
+
+.cards-wrapper .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+.cards-wrapper .card {
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    box-shadow: 0px 0px 5px 0.1px rgba(0,0,0,0.1);
+    background-color: white;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーションの平滑化 */
+  }
+  
+  .card-hover:hover {
+    transform: scale(1.05); /* カーソルが上にあるときに少し大きくする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加して浮き上がっているように見せる */
+  }
+.card_image {
+    padding: 5px 0px;
+    height: 100px;
+    border-bottom: thin solid #e3e3e3;
+    overflow: hidden;
+}
+.card_image img {
+    width: 100%;
+    height: calc(100% - 10px);
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+.card .content {
+    padding: 10px;
+}
+.card .content h4 {
+    font-size: var(--base-font-size);
+    font-weight: var(--font-weight-medium);
+    color: var(--black);
+    margin-bottom: 10px;
+}
+.card .content p {
+    font-size: var(--small-font-size);
+    color: var(--gray);
+    margin-bottom: 10px;
+    line-height: normal; 
+}
+
+@media (max-width: 761px) {
+    .container {
+        width: 90%;
+    }
+    .top-recommendation .link-title h2,  .top-recommendation-item .link-title h2{
+        font-size: var(--base-font-size);
+    }
+    .top-recommendation .cards-container, .top-recommendation-item .cards-container {
+        width: 100%;
+    }
+    .top-recommendation .card, .top-recommendation-item .card {
+        margin: 4px;
+        width: 170px;
+        height: 180px;
+    }
+    .card_image {
+        padding: 5px;
+        height: 60px;
+    }
+    .card_image img {
+        width: 100%;
+        height: 100%;
+    }
+    .card .content h4 {
+        font-size: var(--small-font-size);
+        font-weight: var(--font-weight-medium);
+        margin-bottom: 5px;
+    }
+    .card .content p {
+        font-size: var(--sp-small-font-size);
+        color: var(--gray);
+        margin-bottom: 5px;
+    }
+}
 /* メディアクエリ */
 @media (max-width:1001px) {
+    .container {
+        max-width: 700px;
+    }
     .header-nav {
         position: fixed;
         display: none;
